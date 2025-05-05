@@ -1,4 +1,3 @@
-
 # Utilisation de l'image Python officielle
 FROM python:3.11-slim
 
@@ -11,8 +10,8 @@ COPY . /app
 # Installer les dépendances
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Exposer le port 8085
-EXPOSE 8085
+# Exposer le port utilisé par l'application
+EXPOSE 8080  
 
-# Commande à exécuter au démarrage
+# Commande à exécuter au démarrage de l'application
 CMD ["python", "helloworld.py"]
